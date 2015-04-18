@@ -40,7 +40,7 @@ Export-Package: org.eclipse.ui,org.eclipse.ui.actions,org.eclipse.ui.d
  views.navigator,org.eclipse.ui.views.properties,org.eclipse.ui.views.
  tasklist,org.eclipse.ui.wizards.datatransfer,org.eclipse.ui.wizards.n
  ewresource
-Bundle-Version: 3.7.0.I20110519-0100
+Bundle-Version: 3.7.0.speedtransfer
 Bundle-ClassPath: e4-ide.jar,.
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %Plugin.providerName
