@@ -1,0 +1,43 @@
+Changed class ImportTypeDialog
+
+Extract:
+
+
+			Composite variableGroup = new Composite(composite, 0);
+			gridData = new GridData(SWT.FILL, SWT.FILL, true, true);
+			gridData.horizontalIndent = groupIndent;
+			variableGroup.setLayoutData(gridData);
+			variableGroup.setFont(parent.getFont());
+
+			layout = new GridLayout();
+			layout.numColumns = 2;
+			layout.marginWidth= 0;
+			variableGroup.setLayout(layout);
+
+			// SpeedTransfer Start change
+			relativePathVariableGroup.createContents(new Shell());
+			relativePathVariableGroup.setSelection(false);
+			variable = null;
+			//relativePathVariableGroup.createContents(variableGroup);
+			//relativePathVariableGroup.setSelection(variable != null);
+			//if (variable != null)
+			//	relativePathVariableGroup.selectVariable(variable);
+			//else
+			//	relativePathVariableGroup.selectVariable(preferredVariable);
+			// SpeedTransfer Stop change
+		}
+		
+		if (linkIsOnlyChoice) {
+			currentSelection = IMPORT_LINK;
+			parent.getShell().setText(IDEWorkbenchMessages.ImportTypeDialog_titleFilesLinking);
+		}
+		// SpeedTransfer Start change
+		//createLinkControl(parent);
+		// SpeedTransfer Stop change
+		refreshSelection();
+		
+		// SpeedTransfer Start change
+		relativePathVariableGroup.setSelection(false);
+		// SpeedTransfer Stop change
+		return composite;
+
